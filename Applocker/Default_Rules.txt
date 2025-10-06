@@ -1,0 +1,11 @@
+Default Rules
+
+./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/AppControl/EXE/Policy
+
+./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/AppControl/MSI/Policy
+
+./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/AppControl/Script/Policy
+
+./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/AppControl/StoreApps/Policy
+
+./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/AppControl/DLL/Policy

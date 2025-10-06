@@ -1,0 +1,14 @@
+  <RuleCollection Type="Msi" EnforcementMode="NotConfigured">
+    <FilePathRule Id="bd441eac-c8c5-4cd3-93c8-ad6f05580973" Name="All Windows Installer files" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="*.*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePublisherRule Id="49afdf9e-1635-4d61-9ddb-e9be7c4fd796" Name="All digitally signed Windows Installer files" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePublisherCondition PublisherName="*" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="0.0.0.0" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+  </RuleCollection>

@@ -1,0 +1,16 @@
+<RuleCollection Type="Appx" EnforcementMode="NotConfigured">
+	<FilePublisherRule Id="d0c30f1e-3863-4eda-87f3-0310cd0fe685" Name="All signed packaged apps" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePublisherCondition PublisherName="*" ProductName="*" BinaryName="*">
+				<BinaryVersionRange LowSection="0.0.0.0" HighSection="*"/>
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+	<FilePublisherRule Id="6e86a5ea-51a9-4b96-8271-6e7ab39bf25a" Name="Windows Apps" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePublisherCondition PublisherName="CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" ProductName="*" BinaryName="*">
+				<BinaryVersionRange LowSection="*" HighSection="*"/>
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+</RuleCollection>

@@ -1,0 +1,7 @@
+  <RuleCollection Type="Dll" EnforcementMode="NotConfigured">
+    <FilePathRule Id="a405defc-0139-4bba-972b-bf70b6b8501e" Name="All DLLs" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="*" />
+      </Conditions>
+    </FilePathRule>
+  </RuleCollection>
