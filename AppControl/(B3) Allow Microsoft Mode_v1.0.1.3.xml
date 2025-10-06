@@ -1,0 +1,688 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SiPolicy xmlns="urn:schemas-microsoft-com:sipolicy" PolicyType="Base Policy">
+  <VersionEx>1.0.1.3</VersionEx>
+  <PlatformID>{2E07F7E4-194C-4D20-B7C9-6F44A6C5A234}</PlatformID>
+  <Rules>
+    <Rule>
+      <Option>Required:Enforce Store Applications</Option>
+    </Rule>
+    <Rule>
+      <Option>Enabled:UMCI</Option>
+    </Rule>
+    <Rule>
+      <Option>Enabled:Update Policy No Reboot</Option>
+    </Rule>
+    <Rule>
+      <Option>Enabled:Allow Supplemental Policies</Option>
+    </Rule>
+    <Rule>
+      <Option>Enabled:Unsigned System Integrity Policy</Option>
+    </Rule>
+    <Rule>
+      <Option>Disabled:Script Enforcement</Option>
+    </Rule>
+    <Rule>
+      <Option>Enabled:Advanced Boot Options Menu</Option>
+    </Rule>
+    <Rule>
+      <Option>Enabled:Managed Installer</Option>
+    </Rule>
+    <Rule>
+      <Option>Disabled:Flight Signing</Option>
+    </Rule>
+    <Rule>
+      <Option>Enabled:Boot Audit On Failure</Option>
+    </Rule>
+  </Rules>
+  <!--EKUS-->
+  <EKUs>
+    <EKU ID="ID_EKU_WINDOWS" Value="010A2B0601040182370A0306" FriendlyName="" />
+    <EKU ID="ID_EKU_ELAM" Value="010A2B0601040182373D0401" FriendlyName="" />
+    <EKU ID="ID_EKU_HAL_EXT" Value="010A2B0601040182373D0501" FriendlyName="" />
+    <EKU ID="ID_EKU_WHQL" Value="010A2B0601040182370A0305" FriendlyName="" />
+    <EKU ID="ID_EKU_AM" Value="010A2B0601040182374C0B01" FriendlyName="AntiMalware EKU -1.3.6.1.4.1.311.76.11.1 " />
+    <EKU ID="ID_EKU_STORE" Value="010A2B0601040182374C0301" FriendlyName="Windows Store EKU - 1.3.6.1.4.1.311.76.3.1 Windows Store" />
+    <EKU ID="ID_EKU_RT_EXT" Value="010A2B0601040182370A0315" FriendlyName="" />
+    <EKU ID="ID_EKU_DCODEGEN" Value="010A2B0601040182374C0501" FriendlyName="Dynamic Code Generation EKU - 1.3.6.1.4.1.311.76.5.1" />
+  </EKUs>
+  <!--File Rules-->
+  <FileRules>
+    <Allow ID="ID_ALLOW_ALL_KMCI" FriendlyName="Allow Kernel Drivers" FileName="*" />
+	<Allow ID="ID_ALLOW_PFN_0" FriendlyName="Allow packaged app by Package Family Name (PFN): Microsoft.*_8wekyb3d8bbwe" PackageFamilyName="Microsoft.*_8wekyb3d8bbwe"/>
+	<Allow ID="ID_ALLOW_PFN_1" FriendlyName="Allow packaged app by Package Family Name (PFN): Microsoft.*_cw5n1h2txyewy" PackageFamilyName="Microsoft.*_cw5n1h2txyewy"/>
+	<Allow ID="ID_ALLOW_PFN_2" FriendlyName="Allow packaged app by Package Family Name (PFN): MicrosoftWindows.*_cw5n1h2txyewy" PackageFamilyName="MicrosoftWindows.*_cw5n1h2txyewy"/>
+	<Allow ID="ID_ALLOW_PFN_3" FriendlyName="Allow packaged app by Package Family Name (PFN): MicrosoftCorporationII.*_8wekyb3d8bbwe" PackageFamilyName="MicrosoftCorporationII.*_8wekyb3d8bbwe"/>
+    <Allow ID="ID_ALLOW_PFN_4" FriendlyName="Allow packaged app by Package Family Name (PFN): windows.immersivecontrolpanel_cw5n1h2txyewy" PackageFamilyName="windows.immersivecontrolpanel_cw5n1h2txyewy"/>
+    <Allow ID="ID_ALLOW_PFN_5" FriendlyName="Allow packaged app by Package Family Name (PFN): Windows.PrintDialog_cw5n1h2txyewy" PackageFamilyName="Windows.PrintDialog_cw5n1h2txyewy"/>
+    <Allow ID="ID_ALLOW_PFN_6" FriendlyName="Allow packaged app by Package Family Name (PFN): Windows.CBSPreview_cw5n1h2txyewy" PackageFamilyName="Windows.CBSPreview_cw5n1h2txyewy"/>
+    <Allow ID="ID_ALLOW_PFN_7" FriendlyName="Allow packaged app by Package Family Name (PFN): NcsiUwpApp_8wekyb3d8bbwe" PackageFamilyName="NcsiUwpApp_8wekyb3d8bbwe"/>
+    <Allow ID="ID_ALLOW_PFN_8" FriendlyName="Allow packaged app by Package Family Name (PFN): F46D4000-FD22-4DB4-AC8E-4E1DDDE828FE_cw5n1h2txyewy" PackageFamilyName="F46D4000-FD22-4DB4-AC8E-4E1DDDE828FE_cw5n1h2txyewy"/>
+    <Allow ID="ID_ALLOW_PFN_9" FriendlyName="Allow packaged app by Package Family Name (PFN): E2A4F912-2574-4A75-9BB0-0D023378592B_cw5n1h2txyewy" PackageFamilyName="E2A4F912-2574-4A75-9BB0-0D023378592B_cw5n1h2txyewy"/>
+    <Allow ID="ID_ALLOW_PFN_10" FriendlyName="Allow packaged app by Package Family Name (PFN): c5e2524a-ea46-4f67-841f-6a9465d9d515_cw5n1h2txyewy" PackageFamilyName="c5e2524a-ea46-4f67-841f-6a9465d9d515_cw5n1h2txyewy"/>
+    <Allow ID="ID_ALLOW_PFN_11" FriendlyName="Allow packaged app by Package Family Name (PFN): 1527c705-839a-4832-9118-54d4Bd6a0c89_cw5n1h2txyewy" PackageFamilyName="1527c705-839a-4832-9118-54d4Bd6a0c89_cw5n1h2txyewy"/>
+    <Allow ID="ID_ALLOW_EXECUTOR_0" FriendlyName="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe FileAttribute" FileName="PowerShell.EXE" MinimumFileVersion="10.0.19500.0000" AppIDs="Microsoft.Management.Services.IntuneWindowsAgent.exe"/>
+    <Allow ID="ID_ALLOW_EXECUTOR_1" FriendlyName="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe FileAttribute" FileName="PowerShell.EXE" MinimumFileVersion="10.0.19500.0000" AppIDs="AgentExecutor.exe"/>
+    <Allow ID="ID_ALLOW_EXECUTOR_2" FriendlyName="Register-CimProvider.exe FileAttribute" FileName="ControlConfigProvider.DLL" AppIDs="Register-CimProvider.exe"/>
+    <Allow ID="ID_ALLOW_EXECUTOR_3" FriendlyName="reg.exe FileAttribute" FileName="reg.exe" AppIDs="mdmdiagnosticstool.exe"/>
+    <Allow ID="ID_ALLOW_EXECUTOR_4" FriendlyName="reg.exe FileAttribute" FileName="reg.exe" AppIDs="licensingdiag.exe"/>
+  </FileRules>
+  <!--Signers-->
+  <Signers>
+    <Signer ID="ID_SIGNER_WINDOWS_PRODUCTION_0_0_0" Name="Microsoft Product Root 2010 Windows EKU">
+      <CertRoot Type="Wellknown" Value="06" />
+      <CertEKU ID="ID_EKU_WINDOWS" />
+    </Signer>
+    <Signer ID="ID_SIGNER_ELAM_PRODUCTION_0_0_0" Name="Microsoft Product Root 2010 ELAM EKU">
+      <CertRoot Type="Wellknown" Value="06" />
+      <CertEKU ID="ID_EKU_ELAM" />
+    </Signer>
+    <Signer ID="ID_SIGNER_HAL_PRODUCTION_0_0_0" Name="Microsoft Product Root 2010 HAL EKU">
+      <CertRoot Type="Wellknown" Value="06" />
+      <CertEKU ID="ID_EKU_HAL_EXT" />
+    </Signer>
+    <Signer ID="ID_SIGNER_WHQL_SHA2_0_0_0" Name="Microsoft Product Root 2010 WHQL EKU">
+      <CertRoot Type="Wellknown" Value="06" />
+      <CertEKU ID="ID_EKU_WHQL" />
+    </Signer>
+    <Signer ID="ID_SIGNER_WHQL_SHA1_0_0_0" Name="Microsoft Product Root WHQL EKU SHA1">
+      <CertRoot Type="Wellknown" Value="05" />
+      <CertEKU ID="ID_EKU_WHQL" />
+    </Signer>
+    <Signer ID="ID_SIGNER_WHQL_MD5_0_0_0" Name="Microsoft Product Root WHQL EKU MD5">
+      <CertRoot Type="Wellknown" Value="04" />
+      <CertEKU ID="ID_EKU_WHQL" />
+    </Signer>
+    <Signer ID="ID_SIGNER_PCA2010_AM_0_0_0" Name="Microsoft Windows PCA 2010 with AM EKU">
+      <CertRoot Type="TBS" Value="90C9669670E75989159E6EEF69625EB6AD17CBA6209ED56F5665D55450A05212" />
+      <CertEKU ID="ID_EKU_AM" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_1_1_0" Name="Microsoft Windows Production PCA 2011">
+      <CertRoot Type="TBS" Value="4E80BE107C860DE896384B3EFF50504DC2D76AC7151DF3102A4450637A032146" />
+      <CertPublisher Value="Microsoft Windows" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_BA0_1_0" Name="Microsoft Code Signing PCA 2011">
+      <CertRoot Type="TBS" Value="F6F717A43AD9ABDDC8CEFDDE1C505462535E7D1307E630F9544A2D14FE8BF26E" />
+      <CertPublisher Value="Microsoft Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_C7E_1_0" Name="AME CS CA 01">
+      <CertRoot Type="TBS" Value="B3C1CB053296C713C7D9639BC51C4399A9A6A04B939BFA3967B08AE2535FF1EB" />
+      <CertPublisher Value="Microsoft Azure Code Sign" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_122B_1_0" Name="Microsoft Windows Code Signing PCA 2024">
+      <CertRoot Type="TBS" Value="C64CE3455898F871D11C14DA412AAC58FA2022D4213D8AC05F8DD6909B2FB0FCC76C19A1913DF5BC0CB1662229AD15D1" />
+      <CertPublisher Value="Microsoft Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_12BA_1_0" Name="Microsoft Code Signing PCA 2010">
+      <CertRoot Type="TBS" Value="121AF4B922A74247EA49DF50DE37609CC1451A1FE06B2CB7E1E079B492BD8195" />
+      <CertPublisher Value="Microsoft Windows Hardware Abstraction Layer Publisher" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_1C9D_1_0" Name="Microsoft Code Signing PCA">
+      <CertRoot Type="TBS" Value="27543A3F7612DE2261C7228321722402F63A07DE" />
+      <CertPublisher Value="Microsoft Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_1CC9_1_0" Name="Microsoft Windows Third Party Component CA 2013">
+      <CertRoot Type="TBS" Value="C55EE44C6DE86FA9AC3FC90F84EF0D4A6CAD5AAC6A112047C88B997E7547AED1" />
+      <CertPublisher Value="Microsoft Windows Software Compatibility Publisher" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_2843_1_0" Name="Microsoft Windows Third Party Component CA 2012">
+      <CertRoot Type="TBS" Value="CEC1AFD0E310C55C1DCC601AB8E172917706AA32FB5EAF826813547FDF02DD46" />
+      <CertPublisher Value="Microsoft Windows Hardware Compatibility Publisher" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_2CF0_1_0" Name="Microsoft Windows Production PCA 2011">
+      <CertRoot Type="TBS" Value="4E80BE107C860DE896384B3EFF50504DC2D76AC7151DF3102A4450637A032146" />
+      <CertPublisher Value="Microsoft Windows Publisher" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_3233_1_0" Name="Microsoft Windows Third Party Component CA 2013">
+      <CertRoot Type="TBS" Value="C55EE44C6DE86FA9AC3FC90F84EF0D4A6CAD5AAC6A112047C88B997E7547AED1" />
+      <CertPublisher Value="Microsoft Windows Third Party Application Component" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_3F46_1_0" Name="Microsoft Windows Third Party Component CA 2012">
+      <CertRoot Type="TBS" Value="CEC1AFD0E310C55C1DCC601AB8E172917706AA32FB5EAF826813547FDF02DD46" />
+      <CertPublisher Value="Microsoft Windows 3rd party Component" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_8854_1_0" Name="Microsoft Code Signing PCA">
+      <CertRoot Type="TBS" Value="7251ADC0F732CF409EE462E335BB99544F2DD40F" />
+      <CertPublisher Value="Microsoft Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_BC90_1_0" Name="Microsoft Code Signing PCA 2011">
+      <CertRoot Type="TBS" Value="F6F717A43AD9ABDDC8CEFDDE1C505462535E7D1307E630F9544A2D14FE8BF26E" />
+      <CertPublisher Value="Microsoft Corp Enclave Signer" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_15C7B_1_0" Name="Microsoft Windows Third Party Component CA 2014">
+      <CertRoot Type="TBS" Value="D8BE9E4D9074088EF818BC6F6FB64955E90378B2754155126FEEBBBD969CF0AE" />
+      <CertPublisher Value="Microsoft Windows Hardware Compatibility Publisher" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_15D57_1_0" Name="Microsoft Windows Code Signing PCA 2024">
+      <CertRoot Type="TBS" Value="C64CE3455898F871D11C14DA412AAC58FA2022D4213D8AC05F8DD6909B2FB0FCC76C19A1913DF5BC0CB1662229AD15D1" />
+      <CertPublisher Value="Microsoft Windows Hardware Abstraction Layer Publisher" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_15FC3_1_0" Name="Sectigo Public Code Signing Root R46">
+      <CertRoot Type="TBS" Value="A229D2722BC6091D73B1D979B81088C977CB028A6F7CBF264BB81D5CC8F099F87D7C296E48BF09D7EBE275F5498661A4" />
+      <CertPublisher Value="Intel Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_160DD_1_0" Name="Windows OEM Test Cert 2017 (TEST ONLY)">
+      <CertRoot Type="TBS" Value="C271E94B42B1ABD34CAE4CDE00562D454DC4F946095E5206C45DB86CAC387F40" />
+      <CertPublisher Value="Windows OEM Test Cert 2017 (TEST ONLY)" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_161F1_1_0" Name="DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1">
+      <CertRoot Type="TBS" Value="65B1D4076A89AE273F57E6EEEDECB3EAE129B4168F76FA7671914CDF461D542255C59D9B85B916AE0CA6FC0FCF7A8E64" />
+      <CertPublisher Value="Realtek Semiconductor Corp." />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_16213_1_0" Name="DigiCert EV Code Signing CA (SHA2)">
+      <CertRoot Type="TBS" Value="EEC58131DC11CD7F512501B15FDBC6074C603B68CA91F7162D5A042054EDB0CF" />
+      <CertPublisher Value="Realtek Semiconductor Corp." />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_1621D_1_0" Name="DigiCert EV Code Signing CA">
+      <CertRoot Type="TBS" Value="2D54C16A8F8B69CCDEA48D0603C132F547A5CF75" />
+      <CertPublisher Value="Realtek Semiconductor Corp." />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_16334_1_0" Name="DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1">
+      <CertRoot Type="TBS" Value="65B1D4076A89AE273F57E6EEEDECB3EAE129B4168F76FA7671914CDF461D542255C59D9B85B916AE0CA6FC0FCF7A8E64" />
+      <CertPublisher Value="NVIDIA Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_1633C_1_0" Name="DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1">
+      <CertRoot Type="TBS" Value="65B1D4076A89AE273F57E6EEEDECB3EAE129B4168F76FA7671914CDF461D542255C59D9B85B916AE0CA6FC0FCF7A8E64" />
+      <CertPublisher Value="Nvidia Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_16360_1_0" Name="DigiCert SHA2 Assured ID Code Signing CA">
+      <CertRoot Type="TBS" Value="E767799478F64A34B3F53FF3BB9057FE1768F4AB178041B0DCC0FF1E210CBA65" />
+      <CertPublisher Value="Nvidia Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_16376_1_0" Name="Symantec Class 3 SHA256 Code Signing CA - G2">
+      <CertRoot Type="TBS" Value="7F25CBD37DCDC0E0D93E0D477C4BC0C54231379E6CAF1023841E1F0D96467A6C" />
+      <CertPublisher Value="NVIDIA Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_167DB_1_0" Name="Sectigo RSA Code Signing CA">
+      <CertRoot Type="TBS" Value="20ADC5B59CB532E215F01BA09A9C745898C206555613512FEA7C295CCFD17CED4FE2C5BC3274CA8A270FC68799B8343C" />
+      <CertPublisher Value="Intel Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_16DB1_1_0" Name="COMODO RSA Extended Validation Code Signing CA">
+      <CertRoot Type="TBS" Value="FCD8DD15125F14B84FEC55838806355EC3787407188BAC83C2C0D6C841ADF9AC76EE83ECCC5C9463F1F88FC5295A31EE" />
+      <CertPublisher Value="Intel Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_175ED_1_0" Name="Intel External Basic Policy CA">
+      <CertRoot Type="TBS" Value="53B052BA209C525233293274854B264BC0F68B73" />
+      <CertPublisher Value="Intel Corporation - Client Components Group" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_1784B_1_0" Name="Symantec Class 3 SHA256 Code Signing CA">
+      <CertRoot Type="TBS" Value="A08E79C386083D875014C409C13D144E0A24386132980DF11FF59737C8489EB1" />
+      <CertPublisher Value="DISPLAYLINK (UK) LIMITED" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_17857_1_0" Name="DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1">
+      <CertRoot Type="TBS" Value="65B1D4076A89AE273F57E6EEEDECB3EAE129B4168F76FA7671914CDF461D542255C59D9B85B916AE0CA6FC0FCF7A8E64" />
+      <CertPublisher Value="DISPLAYLINK (UK) LIMITED" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_17883_1_0" Name="DigiCert SHA2 Assured ID Code Signing CA">
+      <CertRoot Type="TBS" Value="E767799478F64A34B3F53FF3BB9057FE1768F4AB178041B0DCC0FF1E210CBA65" />
+      <CertPublisher Value="DISPLAYLINK (UK) LIMITED" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_18D48_1_0" Name="Microsoft Code Signing PCA 2010">
+      <CertRoot Type="TBS" Value="121AF4B922A74247EA49DF50DE37609CC1451A1FE06B2CB7E1E079B492BD8195" />
+      <CertPublisher Value="Microsoft Windows Early Launch Anti-malware Publisher" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_18E82_1_0" Name="Microsoft Windows Code Signing PCA 2024">
+      <CertRoot Type="TBS" Value="C64CE3455898F871D11C14DA412AAC58FA2022D4213D8AC05F8DD6909B2FB0FCC76C19A1913DF5BC0CB1662229AD15D1" />
+      <CertPublisher Value="Microsoft Windows Early Launch Anti-malware Publisher" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_0_0_0" Name="Microsoft Windows Production PCA 2011">
+      <CertRoot Type="TBS" Value="4E80BE107C860DE896384B3EFF50504DC2D76AC7151DF3102A4450637A032146" />
+    </Signer>
+    <Signer ID="ID_SIGNER_STORE_0_0_0" Name="Microsoft MarketPlace PCA 2011">
+      <CertRoot Type="TBS" Value="FC9EDE3DCCA09186B2D3BF9B738A2050CB1A554DA2DCADB55F3F72EE17721378" />
+      <CertEKU ID="ID_EKU_STORE" />
+    </Signer>
+    <Signer ID="ID_SIGNER_RT_PRODUCTION_0_0_0" Name="Microsoft Product Root 2010 RT EKU">
+      <CertRoot Type="Wellknown" Value="06" />
+      <CertEKU ID="ID_EKU_RT_EXT" />
+    </Signer>
+    <Signer ID="ID_SIGNER_DRM_0_0_0" Name="MincryptKnownRootMicrosoftDMDRoot2005">
+      <CertRoot Type="Wellknown" Value="0C" />
+    </Signer>
+    <Signer ID="ID_SIGNER_DCODEGEN_0_0_0" Name="MincryptKnownRootMicrosoftProductRoot2010">
+      <CertRoot Type="Wellknown" Value="06" />
+      <CertEKU ID="ID_EKU_DCODEGEN" />
+    </Signer>
+    <Signer ID="ID_SIGNER_AM_0_0_0" Name="MincryptKnownRootMicrosoftStandardRoot2011">
+      <CertRoot Type="Wellknown" Value="07" />
+      <CertEKU ID="ID_EKU_AM" />
+    </Signer>
+    <Signer ID="ID_SIGNER_RT_STANDARD_0_0_0" Name="Microsoft Standard Root 2011 RT EKU">
+      <CertRoot Type="Wellknown" Value="07" />
+      <CertEKU ID="ID_EKU_RT_EXT" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_4_1_0" Name="Microsoft Windows Production PCA 2011">
+      <CertRoot Type="TBS" Value="4E80BE107C860DE896384B3EFF50504DC2D76AC7151DF3102A4450637A032146" />
+      <CertPublisher Value="Microsoft Windows" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_FB_1_0" Name="Microsoft Windows Code Signing PCA 2024">
+      <CertRoot Type="TBS" Value="C64CE3455898F871D11C14DA412AAC58FA2022D4213D8AC05F8DD6909B2FB0FCC76C19A1913DF5BC0CB1662229AD15D1" />
+      <CertPublisher Value="Microsoft Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_173_1_0" Name="Microsoft Windows Production PCA 2011">
+      <CertRoot Type="TBS" Value="4E80BE107C860DE896384B3EFF50504DC2D76AC7151DF3102A4450637A032146" />
+      <CertPublisher Value="Microsoft Windows Publisher" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_235_1_0" Name="Microsoft Code Signing PCA 2011">
+      <CertRoot Type="TBS" Value="F6F717A43AD9ABDDC8CEFDDE1C505462535E7D1307E630F9544A2D14FE8BF26E" />
+      <CertPublisher Value="Microsoft Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_6AE_1_0" Name="Microsoft Code Signing PCA">
+      <CertRoot Type="TBS" Value="27543A3F7612DE2261C7228321722402F63A07DE" />
+      <CertPublisher Value="Microsoft Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_6AF_1_0" Name="Microsoft Windows Third Party Component CA 2012">
+      <CertRoot Type="TBS" Value="CEC1AFD0E310C55C1DCC601AB8E172917706AA32FB5EAF826813547FDF02DD46" />
+      <CertPublisher Value="Microsoft Windows Hardware Compatibility Publisher" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_6B1_1_0" Name="Microsoft Windows Hardware Compatibility PCA">
+      <CertRoot Type="TBS" Value="6B3242A9A639B0DA4D5882C7EEB402BE6615AD0C" />
+      <CertPublisher Value="Microsoft Windows Hardware Compatibility Publisher" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_733_1_0" Name="Microsoft Windows Third Party Component CA 2013">
+      <CertRoot Type="TBS" Value="C55EE44C6DE86FA9AC3FC90F84EF0D4A6CAD5AAC6A112047C88B997E7547AED1" />
+      <CertPublisher Value="Microsoft Windows Software Compatibility Publisher" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_77F_1_0" Name="Sectigo Public Code Signing Root R46">
+      <CertRoot Type="TBS" Value="A229D2722BC6091D73B1D979B81088C977CB028A6F7CBF264BB81D5CC8F099F87D7C296E48BF09D7EBE275F5498661A4" />
+      <CertPublisher Value="Intel Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_877_1_0" Name="Microsoft Code Signing PCA 2011">
+      <CertRoot Type="TBS" Value="F6F717A43AD9ABDDC8CEFDDE1C505462535E7D1307E630F9544A2D14FE8BF26E" />
+      <CertPublisher Value="Microsoft 3rd Party Application Component" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_90A_1_0" Name="Microsoft Code Signing PCA">
+      <CertRoot Type="TBS" Value="9D50E372989DF49F90CD0612D8593776B786FCFC" />
+      <CertPublisher Value="Microsoft Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_90D_1_0" Name="Microsoft Code Signing PCA">
+      <CertRoot Type="TBS" Value="7251ADC0F732CF409EE462E335BB99544F2DD40F" />
+      <CertPublisher Value="Microsoft Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_938_1_0" Name="Microsoft Code Signing PCA">
+      <CertRoot Type="TBS" Value="38DD92746FFA28C61F90C74497107DC3" />
+      <CertPublisher Value="Microsoft Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_C81_1_0" Name="AME CS CA 01">
+      <CertRoot Type="TBS" Value="B3C1CB053296C713C7D9639BC51C4399A9A6A04B939BFA3967B08AE2535FF1EB" />
+      <CertPublisher Value="Microsoft Azure Code Sign" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_11C3_1_0" Name="DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1">
+      <CertRoot Type="TBS" Value="65B1D4076A89AE273F57E6EEEDECB3EAE129B4168F76FA7671914CDF461D542255C59D9B85B916AE0CA6FC0FCF7A8E64" />
+      <CertPublisher Value="NVIDIA Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_12BF_1_0" Name="Microsoft Code Signing PCA 2010">
+      <CertRoot Type="TBS" Value="121AF4B922A74247EA49DF50DE37609CC1451A1FE06B2CB7E1E079B492BD8195" />
+      <CertPublisher Value="Microsoft Windows Hardware Abstraction Layer Publisher" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_1FE8_1_0" Name="Microsoft Code Signing PCA 2010">
+      <CertRoot Type="TBS" Value="121AF4B922A74247EA49DF50DE37609CC1451A1FE06B2CB7E1E079B492BD8195" />
+      <CertPublisher Value="Microsoft Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_256B_1_0" Name="NVIDIA Subordinate CA 2019-Prod-Sha1">
+      <CertRoot Type="TBS" Value="456102AF171D608AE827735D7E376A7B507B8C60" />
+      <CertPublisher Value="NVIDIA Corporation-PE-Prod-Sha1" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_3236_1_0" Name="Microsoft Windows Third Party Component CA 2013">
+      <CertRoot Type="TBS" Value="C55EE44C6DE86FA9AC3FC90F84EF0D4A6CAD5AAC6A112047C88B997E7547AED1" />
+      <CertPublisher Value="Microsoft Windows Third Party Application Component" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_38D1_1_0" Name="Microsoft Windows Verification PCA">
+      <CertRoot Type="TBS" Value="B1A2D28695B6B41B0A496AFB1EE9E5ED3247C4A9" />
+      <CertPublisher Value="Microsoft Windows" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_38D2_1_0" Name="Microsoft Windows Third Party Component CA 2014">
+      <CertRoot Type="TBS" Value="D8BE9E4D9074088EF818BC6F6FB64955E90378B2754155126FEEBBBD969CF0AE" />
+      <CertPublisher Value="Microsoft Windows Hardware Compatibility Publisher" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_3F49_1_0" Name="Microsoft Windows Third Party Component CA 2012">
+      <CertRoot Type="TBS" Value="CEC1AFD0E310C55C1DCC601AB8E172917706AA32FB5EAF826813547FDF02DD46" />
+      <CertPublisher Value="Microsoft Windows 3rd party Component" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_3F9B_1_0" Name="Microsoft Windows Verification Intermediate PCA">
+      <CertRoot Type="TBS" Value="582675423D25CFB9075534550A86E96E5BCB0F61" />
+      <CertPublisher Value="Microsoft Windows Component Publisher" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_5090_1_0" Name="Microsoft Code Signing PCA">
+      <CertRoot Type="TBS" Value="5095BF071B0D9976E40AE08412F4E1D241AFB58C" />
+      <CertPublisher Value="Microsoft Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_5A85_1_0" Name="Microsoft Windows PCA 2010">
+      <CertRoot Type="TBS" Value="90C9669670E75989159E6EEF69625EB6AD17CBA6209ED56F5665D55450A05212" />
+      <CertPublisher Value="Microsoft Windows" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_7607_1_0" Name="Microsoft MarketPlace PCA 2011">
+      <CertRoot Type="TBS" Value="FC9EDE3DCCA09186B2D3BF9B738A2050CB1A554DA2DCADB55F3F72EE17721378" />
+      <CertPublisher Value="Microsoft Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_BC94_1_0" Name="Microsoft Code Signing PCA 2011">
+      <CertRoot Type="TBS" Value="F6F717A43AD9ABDDC8CEFDDE1C505462535E7D1307E630F9544A2D14FE8BF26E" />
+      <CertPublisher Value="Microsoft Corp Enclave Signer" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_BCC5_1_0" Name="DigiCert Trusted Root G4">
+      <CertRoot Type="TBS" Value="11533EFD6B326A4E065A936DE300FE0586A479F93D569D2403BD62C7AD35F1B2199DAEE3ADB510F429C4FC97B4B024E3" />
+      <CertPublisher Value="Google LLC" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_15D5E_1_0" Name="Microsoft Windows Code Signing PCA 2024">
+      <CertRoot Type="TBS" Value="C64CE3455898F871D11C14DA412AAC58FA2022D4213D8AC05F8DD6909B2FB0FCC76C19A1913DF5BC0CB1662229AD15D1" />
+      <CertPublisher Value="Microsoft Windows Hardware Abstraction Layer Publisher" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_1600B_1_0" Name="DigiCert EV Code Signing CA (SHA2)">
+      <CertRoot Type="TBS" Value="EEC58131DC11CD7F512501B15FDBC6074C603B68CA91F7162D5A042054EDB0CF" />
+      <CertPublisher Value="Logitech Inc" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_1608A_1_0" Name="Windows OEM Test Cert 2017 (TEST ONLY)">
+      <CertRoot Type="TBS" Value="A3E4289BF9B8C315709658E98AFC95FA1F38835899DD3BA782B82C1E9D3983C6" />
+      <CertPublisher Value="Windows OEM Test Cert 2017 (TEST ONLY)" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_160E1_1_0" Name="Windows OEM Test Cert 2017 (TEST ONLY)">
+      <CertRoot Type="TBS" Value="C271E94B42B1ABD34CAE4CDE00562D454DC4F946095E5206C45DB86CAC387F40" />
+      <CertPublisher Value="Windows OEM Test Cert 2017 (TEST ONLY)" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_161F5_1_0" Name="DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1">
+      <CertRoot Type="TBS" Value="65B1D4076A89AE273F57E6EEEDECB3EAE129B4168F76FA7671914CDF461D542255C59D9B85B916AE0CA6FC0FCF7A8E64" />
+      <CertPublisher Value="Realtek Semiconductor Corp." />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_16218_1_0" Name="DigiCert EV Code Signing CA (SHA2)">
+      <CertRoot Type="TBS" Value="EEC58131DC11CD7F512501B15FDBC6074C603B68CA91F7162D5A042054EDB0CF" />
+      <CertPublisher Value="Realtek Semiconductor Corp." />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_16223_1_0" Name="DigiCert EV Code Signing CA">
+      <CertRoot Type="TBS" Value="2D54C16A8F8B69CCDEA48D0603C132F547A5CF75" />
+      <CertPublisher Value="Realtek Semiconductor Corp." />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_1626A_1_0" Name="DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1">
+      <CertRoot Type="TBS" Value="65B1D4076A89AE273F57E6EEEDECB3EAE129B4168F76FA7671914CDF461D542255C59D9B85B916AE0CA6FC0FCF7A8E64" />
+      <CertPublisher Value="Logitech Inc" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_16340_1_0" Name="DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1">
+      <CertRoot Type="TBS" Value="65B1D4076A89AE273F57E6EEEDECB3EAE129B4168F76FA7671914CDF461D542255C59D9B85B916AE0CA6FC0FCF7A8E64" />
+      <CertPublisher Value="Nvidia Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_16365_1_0" Name="DigiCert SHA2 Assured ID Code Signing CA">
+      <CertRoot Type="TBS" Value="E767799478F64A34B3F53FF3BB9057FE1768F4AB178041B0DCC0FF1E210CBA65" />
+      <CertPublisher Value="Nvidia Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_1637A_1_0" Name="Symantec Class 3 SHA256 Code Signing CA - G2">
+      <CertRoot Type="TBS" Value="7F25CBD37DCDC0E0D93E0D477C4BC0C54231379E6CAF1023841E1F0D96467A6C" />
+      <CertPublisher Value="NVIDIA Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_163C8_1_0" Name="VeriSign Class 3 Code Signing 2010 CA">
+      <CertRoot Type="TBS" Value="4843A82ED3B1F2BFBEE9671960E1940C942F688D" />
+      <CertPublisher Value="NVIDIA Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_165AE_1_0" Name="DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1">
+      <CertRoot Type="TBS" Value="65B1D4076A89AE273F57E6EEEDECB3EAE129B4168F76FA7671914CDF461D542255C59D9B85B916AE0CA6FC0FCF7A8E64" />
+      <CertPublisher Value="LunarG, Inc." />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_167D7_1_0" Name="Sectigo RSA Code Signing CA">
+      <CertRoot Type="TBS" Value="20ADC5B59CB532E215F01BA09A9C745898C206555613512FEA7C295CCFD17CED4FE2C5BC3274CA8A270FC68799B8343C" />
+      <CertPublisher Value="Intel Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_16DB6_1_0" Name="COMODO RSA Extended Validation Code Signing CA">
+      <CertRoot Type="TBS" Value="FCD8DD15125F14B84FEC55838806355EC3787407188BAC83C2C0D6C841ADF9AC76EE83ECCC5C9463F1F88FC5295A31EE" />
+      <CertPublisher Value="Intel Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_173F4_1_0" Name="Sectigo RSA Code Signing CA 2">
+      <CertRoot Type="TBS" Value="54DE7E1F5B9B2C1834C8E4FEDEF7BEC89E6E7117EF761A80D1BCCEC1D63888D0D4AD1B6C5C6A4EA556436DDD29AAF904" />
+      <CertPublisher Value="Intel Corporation" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_1740C_1_0" Name=".NET Foundation Projects Code Signing CA">
+      <CertRoot Type="TBS" Value="B6D27A37A95C0A174C66496B3225B11A6250846BBC31FCA10D69D61F92DF5084" />
+      <CertPublisher Value="Json.NET (.NET Foundation)" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_175F2_1_0" Name="Intel External Basic Policy CA">
+      <CertRoot Type="TBS" Value="53B052BA209C525233293274854B264BC0F68B73" />
+      <CertPublisher Value="Intel Corporation - Client Components Group" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_17851_1_0" Name="Symantec Class 3 SHA256 Code Signing CA">
+      <CertRoot Type="TBS" Value="A08E79C386083D875014C409C13D144E0A24386132980DF11FF59737C8489EB1" />
+      <CertPublisher Value="DISPLAYLINK (UK) LIMITED" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_1785C_1_0" Name="DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1">
+      <CertRoot Type="TBS" Value="65B1D4076A89AE273F57E6EEEDECB3EAE129B4168F76FA7671914CDF461D542255C59D9B85B916AE0CA6FC0FCF7A8E64" />
+      <CertPublisher Value="DISPLAYLINK (UK) LIMITED" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_17888_1_0" Name="DigiCert SHA2 Assured ID Code Signing CA">
+      <CertRoot Type="TBS" Value="E767799478F64A34B3F53FF3BB9057FE1768F4AB178041B0DCC0FF1E210CBA65" />
+      <CertPublisher Value="DISPLAYLINK (UK) LIMITED" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_17900_1_0" Name="DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1">
+      <CertRoot Type="TBS" Value="65B1D4076A89AE273F57E6EEEDECB3EAE129B4168F76FA7671914CDF461D542255C59D9B85B916AE0CA6FC0FCF7A8E64" />
+      <CertPublisher Value="Dolby Laboratories, Inc." />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_17C34_1_0" Name="iKGF_AZSKGFDCS">
+      <CertRoot Type="TBS" Value="845E86C9F99273BFE19ABC3FFDC8D0CB71D7932C" />
+      <CertPublisher Value="IntelVPGSigning2021" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_18D51_1_0" Name="Microsoft Code Signing PCA 2010">
+      <CertRoot Type="TBS" Value="121AF4B922A74247EA49DF50DE37609CC1451A1FE06B2CB7E1E079B492BD8195" />
+      <CertPublisher Value="Microsoft Windows Early Launch Anti-malware Publisher" />
+    </Signer>
+    <Signer ID="ID_SIGNER_S_18E83_1_0" Name="Microsoft Windows Code Signing PCA 2024">
+      <CertRoot Type="TBS" Value="C64CE3455898F871D11C14DA412AAC58FA2022D4213D8AC05F8DD6909B2FB0FCC76C19A1913DF5BC0CB1662229AD15D1" />
+      <CertPublisher Value="Microsoft Windows Early Launch Anti-malware Publisher" />
+    </Signer>
+  </Signers>
+  <!--Driver Signing Scenarios-->
+  <SigningScenarios>
+    <SigningScenario Value="131" ID="ID_SIGNINGSCENARIO_DRIVERS_1" FriendlyName="Kernel Mode Code Integrity">
+      <ProductSigners>
+        <AllowedSigners>
+          <AllowedSigner SignerId="ID_SIGNER_WINDOWS_PRODUCTION_0_0_0" />
+          <AllowedSigner SignerId="ID_SIGNER_ELAM_PRODUCTION_0_0_0" />
+          <AllowedSigner SignerId="ID_SIGNER_HAL_PRODUCTION_0_0_0" />
+          <AllowedSigner SignerId="ID_SIGNER_WHQL_SHA2_0_0_0" />
+          <AllowedSigner SignerId="ID_SIGNER_WHQL_SHA1_0_0_0" />
+          <AllowedSigner SignerId="ID_SIGNER_WHQL_MD5_0_0_0" />
+          <AllowedSigner SignerId="ID_SIGNER_PCA2010_AM_0_0_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_1_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_BA0_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_C7E_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_122B_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_12BA_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_1C9D_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_1CC9_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_2843_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_2CF0_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_3233_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_3F46_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_8854_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_BC90_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_15C7B_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_15D57_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_15FC3_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_160DD_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_161F1_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_16213_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_1621D_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_16334_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_1633C_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_16360_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_16376_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_167DB_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_16DB1_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_175ED_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_1784B_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_17857_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_17883_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_18D48_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_18E82_1_0" />
+        </AllowedSigners>
+        <FileRulesRef>
+          <FileRuleRef RuleID="ID_ALLOW_ALL_KMCI" />
+        </FileRulesRef>
+      </ProductSigners>
+    </SigningScenario>
+    <SigningScenario Value="12" ID="ID_SIGNINGSCENARIO_WINDOWS" FriendlyName="User Mode Code Integrity">
+      <ProductSigners>
+        <AllowedSigners>
+          <AllowedSigner SignerId="ID_SIGNER_S_0_0_0" />
+          <AllowedSigner SignerId="ID_SIGNER_WINDOWS_PRODUCTION_0_0_0" />
+          <AllowedSigner SignerId="ID_SIGNER_ELAM_PRODUCTION_0_0_0" />
+          <AllowedSigner SignerId="ID_SIGNER_HAL_PRODUCTION_0_0_0" />
+          <AllowedSigner SignerId="ID_SIGNER_WHQL_SHA2_0_0_0" />
+          <AllowedSigner SignerId="ID_SIGNER_WHQL_SHA1_0_0_0" />
+          <AllowedSigner SignerId="ID_SIGNER_WHQL_MD5_0_0_0" />
+          <AllowedSigner SignerId="ID_SIGNER_STORE_0_0_0" />
+          <AllowedSigner SignerId="ID_SIGNER_RT_PRODUCTION_0_0_0" />
+          <AllowedSigner SignerId="ID_SIGNER_DRM_0_0_0" />
+          <AllowedSigner SignerId="ID_SIGNER_DCODEGEN_0_0_0" />
+          <AllowedSigner SignerId="ID_SIGNER_AM_0_0_0" />
+          <AllowedSigner SignerId="ID_SIGNER_RT_STANDARD_0_0_0" />
+          <AllowedSigner SignerId="ID_SIGNER_PCA2010_AM_0_0_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_4_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_FB_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_173_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_235_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_6AE_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_6AF_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_6B1_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_733_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_77F_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_877_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_90A_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_90D_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_938_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_C81_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_11C3_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_12BF_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_1FE8_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_256B_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_3236_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_38D1_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_38D2_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_3F49_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_3F9B_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_5090_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_5A85_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_7607_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_BC94_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_BCC5_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_15D5E_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_1600B_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_1608A_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_160E1_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_161F5_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_16218_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_16223_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_1626A_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_16340_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_16365_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_1637A_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_163C8_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_165AE_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_167D7_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_16DB6_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_173F4_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_1740C_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_175F2_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_17851_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_1785C_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_17888_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_17900_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_17C34_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_18D51_1_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_18E83_1_0" />
+        </AllowedSigners>
+        <FileRulesRef>
+		  <FileRuleRef RuleID="ID_ALLOW_PFN_0"/>
+		  <FileRuleRef RuleID="ID_ALLOW_PFN_1"/>
+		  <FileRuleRef RuleID="ID_ALLOW_PFN_2"/>
+		  <FileRuleRef RuleID="ID_ALLOW_PFN_3"/>
+		  <FileRuleRef RuleID="ID_ALLOW_PFN_4"/>
+		  <FileRuleRef RuleID="ID_ALLOW_PFN_5"/>
+		  <FileRuleRef RuleID="ID_ALLOW_PFN_6"/>
+		  <FileRuleRef RuleID="ID_ALLOW_PFN_7"/>
+		  <FileRuleRef RuleID="ID_ALLOW_PFN_8"/>
+		  <FileRuleRef RuleID="ID_ALLOW_PFN_9"/>
+		  <FileRuleRef RuleID="ID_ALLOW_PFN_10"/>
+		  <FileRuleRef RuleID="ID_ALLOW_PFN_11"/>
+          <FileRuleRef RuleID="ID_ALLOW_EXECUTOR_0"/>
+          <FileRuleRef RuleID="ID_ALLOW_EXECUTOR_1"/>
+          <FileRuleRef RuleID="ID_ALLOW_EXECUTOR_2"/>
+          <FileRuleRef RuleID="ID_ALLOW_EXECUTOR_3"/>
+          <FileRuleRef RuleID="ID_ALLOW_EXECUTOR_4"/>
+        </FileRulesRef>
+      </ProductSigners>
+    </SigningScenario>
+  </SigningScenarios>
+  <UpdatePolicySigners />
+  <CiSigners>
+    <CiSigner SignerId="ID_SIGNER_S_0_0_0" />
+    <CiSigner SignerId="ID_SIGNER_STORE_0_0_0" />
+    <CiSigner SignerId="ID_SIGNER_PCA2010_AM_0_0_0" />
+    <CiSigner SignerId="ID_SIGNER_S_4_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_FB_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_173_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_235_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_6AE_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_6AF_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_6B1_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_733_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_77F_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_877_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_90A_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_90D_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_938_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_C81_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_11C3_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_12BF_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_1FE8_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_256B_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_3236_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_38D1_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_38D2_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_3F49_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_3F9B_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_5090_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_5A85_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_7607_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_BC94_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_BCC5_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_15D5E_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_1600B_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_1608A_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_160E1_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_161F5_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_16218_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_16223_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_1626A_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_16340_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_16365_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_1637A_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_163C8_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_165AE_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_167D7_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_16DB6_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_173F4_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_1740C_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_175F2_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_17851_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_1785C_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_17888_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_17900_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_17C34_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_18D51_1_0" />
+    <CiSigner SignerId="ID_SIGNER_S_18E83_1_0" />
+  </CiSigners>
+  <HvciOptions>0</HvciOptions>
+  <BasePolicyID>{B3000000-E129-7734-AB6A-E797A706DA9F}</BasePolicyID>
+  <PolicyID>{B3000000-E129-7734-AB6A-E797A706DA9F}</PolicyID>
+  <Settings>
+    <Setting Provider="PolicyInfo" Key="Information" ValueName="Name">
+      <Value>
+        <String>Base Allow Microsoft Mode</String>
+      </Value>
+    </Setting>
+    <Setting Provider="PolicyInfo" Key="Information" ValueName="Id">
+      <Value>
+        <String>1.0.1.3</String>
+      </Value>
+    </Setting>
+    <Setting Provider="AllHostIds" Key="AllKeys" ValueName="EnterpriseDefinedClsId">
+      <Value>
+        <Boolean>true</Boolean>
+      </Value>
+    </Setting>
+  </Settings>
+</SiPolicy>
