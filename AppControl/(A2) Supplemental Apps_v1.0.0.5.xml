@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SiPolicy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" PolicyType="Supplemental Policy" xmlns="urn:schemas-microsoft-com:sipolicy">
+	<VersionEx>1.0.0.5</VersionEx>
+	<PlatformID>{2E07F7E4-194C-4D20-B7C9-6F44A6C5A234}</PlatformID>
+	<PolicyID>{A2000000-9B5F-476E-89EC-E8A6F2585386}</PolicyID>
+	<BasePolicyID>{B3000000-E129-7734-AB6A-E797A706DA9F}</BasePolicyID>
+	<Rules>
+		<Rule>
+			<Option>Enabled:Inherit Default Policy</Option>
+		</Rule>
+		<Rule>
+			<Option>Enabled:Unsigned System Integrity Policy</Option>
+		</Rule>
+		<Rule>
+			<Option>Enabled:Managed Installer</Option>
+		</Rule>
+		<Rule>
+			<Option>Enabled:UMCI</Option>
+		</Rule>
+	</Rules>
+	<EKUs/>
+	<FileRules>
+		<Allow ID="ID_ALLOW_APP_0" FriendlyName="Allow packaged app by Package Family Name (PFN): Outlook PWA MSIX" PackageFamilyName="outlook.office.com-F53E19B5_akxy2sb7nnr06"/>
+		<Allow ID="ID_ALLOW_APP_1" FriendlyName="Allow packaged app by Package Family Name (PFN): MicrosoftTeams_8wekyb3d8bbwe" PackageFamilyName="MicrosoftTeams_8wekyb3d8bbwe"/>
+		<Allow ID="ID_ALLOW_APP_2" FriendlyName="Allow packaged app by Package Family Name (PFN): aimgr_8wekyb3d8bbwe" PackageFamilyName="aimgr_8wekyb3d8bbwe"/>
+		<Allow ID="ID_ALLOW_APP_3" FriendlyName="Allow packaged app by Package Family Name (PFN): Clipchamp.Clipchamp_yxz26nhyzhsrt" PackageFamilyName="Clipchamp.Clipchamp_yxz26nhyzhsrt"/>
+		<Allow ID="ID_ALLOW_APP_4" FriendlyName="Allow packaged app by Package Family Name (PFN): MicrosoftCorporationII.AzureVirtualDesktopHostApp_8wekyb3d8bbwe" PackageFamilyName="MicrosoftCorporationII.AzureVirtualDesktopHostApp_8wekyb3d8bbwe"/>
+		<Allow ID="ID_ALLOW_APP_5" FriendlyName="Allow packaged app by Package Family Name (PFN): Windows365_8wekyb3d8bbwe" PackageFamilyName="Windows365_8wekyb3d8bbwe"/>
+		<Allow ID="ID_ALLOW_APP_6" FriendlyName="Allow packaged app by Package Family Name (PFN): VioletHansen.AppControlManager_ea7andspwdn10" PackageFamilyName="VioletHansen.AppControlManager_ea7andspwdn10" MinimumFileVersion="0.0.0.0" />
+		<!--File Executor Rules-->
+		<Allow ID="ID_ALLOW_EXECUTOR_0" FriendlyName="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe FileAttribute" FileName="PowerShell.EXE" MinimumFileVersion="10.0.19500.0000" AppIDs="VSCode.exe"/>
+	</FileRules>
+	<Signers/>
+	<SigningScenarios>
+		<SigningScenario ID="ID_SIGNINGSCENARIO_DRIVERS_1" FriendlyName="Kernel Mode Code Integrity" Value="131">
+			<ProductSigners/>
+		</SigningScenario>
+		<SigningScenario ID="ID_SIGNINGSCENARIO_WINDOWS" FriendlyName="User Mode Code Integrity" Value="12">
+			<ProductSigners>
+				<FileRulesRef>
+					<FileRuleRef RuleID="ID_ALLOW_APP_0"/>
+					<FileRuleRef RuleID="ID_ALLOW_APP_1"/>
+					<FileRuleRef RuleID="ID_ALLOW_APP_2"/>
+					<FileRuleRef RuleID="ID_ALLOW_APP_3"/>
+					<FileRuleRef RuleID="ID_ALLOW_APP_4"/>
+					<FileRuleRef RuleID="ID_ALLOW_APP_5"/>
+					<FileRuleRef RuleID="ID_ALLOW_APP_6"/>
+					<FileRuleRef RuleID="ID_ALLOW_EXECUTOR_0"/>
+				</FileRulesRef>
+			</ProductSigners>
+		</SigningScenario>
+	</SigningScenarios>
+	<UpdatePolicySigners/>
+	<CiSigners/>
+	<HvciOptions>0</HvciOptions>
+	<Settings>
+		<Setting Provider="PolicyInfo" Key="Information" ValueName="Name">
+			<Value>
+				<String>Supplemental Apps</String>
+			</Value>
+		</Setting>
+		<Setting Provider="PolicyInfo" Key="Information" ValueName="Id">
+			<Value>
+				<String>1.0.0.5</String>
+			</Value>
+		</Setting>
+	</Settings>
+</SiPolicy>
