@@ -1,7 +1,7 @@
 # AppControl-Starter-Kit
 Starter Kit for App Control for Business and Applocker
 
-![alt text](https://github.com/Marco-Sap/AppControl-Starter-Kit/src/blob/main/slide1.png?raw=true)
+![alt text](https://github.com/Marco-Sap/AppControl-Starter-Kit/blob/main/slide1.png?raw=true)
 
 Changelog:
 *
