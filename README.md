@@ -3,7 +3,7 @@ Starter Kit for App Control for Business and Applocker
 
 ![alt text](https://github.com/Marco-Sap/AppControl-Starter-Kit/blob/main/Src/Slide1.PNG?raw=true)
 
-![alt text](https://github.com/Marco-Sap/AppControl-Starter-Kit/blob/main/Src/Slide1.PNG?raw=true)
+![alt text](https://github.com/Marco-Sap/AppControl-Starter-Kit/blob/main/Src/Slide3.PNG?raw=true)
 
 Changelog:
 * Removed individual Apps from B3 and used wildcards
