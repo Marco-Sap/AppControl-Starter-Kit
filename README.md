@@ -12,4 +12,7 @@ Changelog:
 
 Backlog:
 * Cleanup of Certificates in B3
-* Example B4 DenyAll for App Control process of adding Software 
+* Example B4 DenyAll for App Control process of adding Software
+* Enforce HVCI
+* Remove "Enabled:Advanced Boot Options Menu" in all B policy
+* Remove "Enabled:Boot Audit On Failure" in all B policy
