@@ -8,6 +8,7 @@ Starter Kit for App Control for Business and Applocker
 Changelog:
 * Removed individual Apps from B3 and used wildcards
 * Removed redundant Apps from A1
+* Added Explicit Deny B5
 
 Backlog:
 * Cleanup of Certificates in B3
