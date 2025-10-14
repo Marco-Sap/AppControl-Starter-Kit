@@ -9,6 +9,7 @@ Changelog:
 * Removed individual Apps from B3 and used wildcards
 * Removed redundant Apps from A1
 * Added Explicit Deny B4
+* Added AppLocker Audit files under Applocker/ApplockerAudit with custom csp name "AppControlAudit"
 
 Backlog:
 * Cleanup of Certificates in B3
