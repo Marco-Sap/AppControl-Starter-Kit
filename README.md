@@ -25,3 +25,5 @@ Backlog:
 * Remove "Enabled:Advanced Boot Options Menu" in all B policy
 * Remove "Enabled:Boot Audit On Failure" in all B policy
 * Add COM Object option to all B policy
+
+Tested on hardware Dell, HP and Surface Pro and Hyper-V VM. User-Deployment and Pre-Provisioning with AutoPilot (not Windows Autopilot device preparation as that has know issues with Managed Installer)
