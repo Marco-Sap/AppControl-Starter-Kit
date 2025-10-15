@@ -18,6 +18,7 @@ Changelog:
 * Added Explicit Deny B4 policy with the Downloads folder as example
 * Added Audit B5 policy with C:\Users as example
 * Added AppLocker Audit files under Applocker/ApplockerAudit with custom CSP name "AppControlAudit"
+* Added MS Teams to B3 1.0.1.7
 
 Backlog:
 * Cleanup of Certificates in B3
