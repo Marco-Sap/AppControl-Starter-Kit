@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SiPolicy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" PolicyType="Base Policy" xmlns="urn:schemas-microsoft-com:sipolicy">
-  <VersionEx>1.0.0.2</VersionEx>
+  <VersionEx>1.0.0.3</VersionEx>
   <PlatformID>{2E07F7E4-194C-4D20-B7C9-6F44A6C5A234}</PlatformID>
   <PolicyID>{B2000000-E285-77AE-AD54-4C353C19AC02}</PolicyID>
   <BasePolicyID>{B2000000-E285-77AE-AD54-4C353C19AC02}</BasePolicyID>
@@ -1394,7 +1394,7 @@
     </Setting>
     <Setting Provider="PolicyInfo" Key="Information" ValueName="Id">
       <Value>
-        <String>1.0.0.2</String>
+        <String>1.0.0.3</String>
       </Value>
     </Setting>
   </Settings>
