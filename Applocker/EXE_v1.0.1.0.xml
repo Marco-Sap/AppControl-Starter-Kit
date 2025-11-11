@@ -1,0 +1,142 @@
+<RuleCollection Type="Exe" EnforcementMode="Enabled">
+	<!--Allow exceptions for Administrators for EPM-->
+	<FilePublisherRule Id="7972a742-e2c9-4c05-9ec7-cdfdfd201d7d" Name="REGEDIT" Description="" UserOrGroupSid="S-1-5-32-544" Action="Allow">
+		<Conditions>
+			<FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="REGEDIT.EXE">
+				<BinaryVersionRange LowSection="*" HighSection="*"/>
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+	<FilePublisherRule Id="d3791b86-d6a8-4470-94ed-0355e6e8b033" Name="CMD" Description="" UserOrGroupSid="S-1-5-32-544" Action="Allow">
+		<Conditions>
+			<FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="CMD.EXE">
+				<BinaryVersionRange LowSection="*" HighSection="*"/>
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+	<FilePublisherRule Id="5a7785d3-041c-43af-b821-afa10f6568e5" Name="POWERSHELL" Description="" UserOrGroupSid="S-1-5-32-544" Action="Allow">
+		<Conditions>
+			<FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="POWERSHELL.EXE">
+				<BinaryVersionRange LowSection="*" HighSection="*"/>
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+	<FilePublisherRule Id="141d7270-ced8-4284-8581-8379a5301625" Name="POWERSHELL_ISE" Description="" UserOrGroupSid="S-1-5-32-544" Action="Allow">
+		<Conditions>
+			<FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="POWERSHELL_ISE.EXE">
+				<BinaryVersionRange LowSection="*" HighSection="*"/>
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+	<FilePublisherRule Id="65c190d8-54c0-4660-a16e-8330cc716631" Name="WSCRIPT" Description="" UserOrGroupSid="S-1-5-32-544" Action="Allow">
+		<Conditions>
+			<FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT ® WINDOWS SCRIPT HOST" BinaryName="WSCRIPT.EXE">
+				<BinaryVersionRange LowSection="*" HighSection="*"/>
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+	<FilePublisherRule Id="0b7f7bdd-dd52-4ba7-bcf7-96dce4c7cfd9" Name="CSCRIPT" Description="" UserOrGroupSid="S-1-5-32-544" Action="Allow">
+		<Conditions>
+			<FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT ® WINDOWS SCRIPT HOST" BinaryName="CSCRIPT.EXE">
+				<BinaryVersionRange LowSection="*" HighSection="*"/>
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+	<!--Allow all Files for Administrators with exceptions for EPM-->
+	<FilePathRule Id="7214cae2-d3d6-448b-9f83-bce5fe6b8ba7" Name="All files" Description="" UserOrGroupSid="S-1-5-32-544" Action="Allow">
+		<Conditions>
+			<FilePathCondition Path="*"/>
+		</Conditions>
+		<Exceptions>
+			<FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT ® WINDOWS SCRIPT HOST" BinaryName="CSCRIPT.EXE">
+				<BinaryVersionRange LowSection="*" HighSection="*"/>
+			</FilePublisherCondition>
+			<FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT ® WINDOWS SCRIPT HOST" BinaryName="WSCRIPT.EXE">
+				<BinaryVersionRange LowSection="*" HighSection="*"/>
+			</FilePublisherCondition>
+			<FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="CMD.EXE">
+				<BinaryVersionRange LowSection="*" HighSection="*"/>
+			</FilePublisherCondition>
+			<FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="POWERSHELL_ISE.EXE">
+				<BinaryVersionRange LowSection="*" HighSection="*"/>
+			</FilePublisherCondition>
+			<FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="REGEDIT.EXE">
+				<BinaryVersionRange LowSection="*" HighSection="*"/>
+			</FilePublisherCondition>
+			<FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="STORE INSTALLER" BinaryName="STOREINSTALLER.EXE">
+				<BinaryVersionRange LowSection="*" HighSection="*"/>
+			</FilePublisherCondition>
+		</Exceptions>
+	</FilePathRule>
+	<!--Allow all Files from Progam Files for Everyone-->
+	<FilePathRule Id="921cc485-6e17-4653-8f75-050b80acca20" Name="Program Files folder" Description="Everyone" UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePathCondition Path="%PROGRAMFILES%\*"/>
+		</Conditions>
+	</FilePathRule>
+	<!--Allow all Files from Windows folder for Everyone with exceptions to block-->
+	<FilePathRule Id="a61c8b2c-a319-4cd0-9690-d2177cad7b51" Name="Windows folder" Description="Everyone" UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePathCondition Path="%WINDIR%\*"/>
+		</Conditions>
+		<Exceptions>
+			<FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT ® WINDOWS SCRIPT HOST" BinaryName="CSCRIPT.EXE">
+				<BinaryVersionRange LowSection="*" HighSection="*"/>
+			</FilePublisherCondition>
+			<FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT ® WINDOWS SCRIPT HOST" BinaryName="WSCRIPT.EXE">
+				<BinaryVersionRange LowSection="*" HighSection="*"/>
+			</FilePublisherCondition>
+			<FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="CMD.EXE">
+				<BinaryVersionRange LowSection="*" HighSection="*"/>
+			</FilePublisherCondition>
+			<FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="POWERSHELL.EXE">
+				<BinaryVersionRange LowSection="*" HighSection="*"/>
+			</FilePublisherCondition>
+			<FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="POWERSHELL_ISE.EXE">
+				<BinaryVersionRange LowSection="*" HighSection="*"/>
+			</FilePublisherCondition>
+			<FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="REGEDIT.EXE">
+				<BinaryVersionRange LowSection="*" HighSection="*"/>
+			</FilePublisherCondition>
+			<FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="STORE INSTALLER" BinaryName="STOREINSTALLER.EXE">
+				<BinaryVersionRange LowSection="*" HighSection="*"/>
+			</FilePublisherCondition>
+		</Exceptions>
+	</FilePathRule>
+	<!--Specific Allow for Everyone for running applications from the User Profile-->
+	<FilePublisherRule Id="911cc481-6e17-4653-8f75-050b80acca20" Name="DLPUSERAGENT.EXE" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="DLPUSERAGENT.EXE">
+				<BinaryVersionRange LowSection="*" HighSection="*"/>
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+	<FilePublisherRule Id="921cc481-6e17-4653-8f75-050b80acca20" Name="MIPDLP.EXE" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT® WINDOWS® OPERATING SYSTEM" BinaryName="MIPDLP.EXE">
+				<BinaryVersionRange LowSection="*" HighSection="*"/>
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+	<FilePublisherRule Id="931cc481-6e17-4653-8f75-050b80acca20" Name="MICROSOFT ONEDRIVE" Description="Everyone" UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT ONEDRIVE" BinaryName="*">
+				<BinaryVersionRange LowSection="*" HighSection="*"/>
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+	<FilePublisherRule Id="941cc481-6e17-4653-8f75-050b80acca20" Name="MICROSOFT SHAREPOINT" Description="Everyone" UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT SHAREPOINT" BinaryName="MICROSOFT.SHAREPOINT.EXE">
+				<BinaryVersionRange LowSection="*" HighSection="*"/>
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+	<FilePublisherRule Id="951cc481-6e17-4653-8f75-050b80acca20" Name="MICROSOFT ONEDRIVE SYNC SERVICE" Description="Everyone" UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT ONEDRIVE SYNC SERVICE" BinaryName="ONEDRIVE.SYNC.SERVICE.EXE">
+				<BinaryVersionRange LowSection="*" HighSection="*"/>
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+</RuleCollection>
