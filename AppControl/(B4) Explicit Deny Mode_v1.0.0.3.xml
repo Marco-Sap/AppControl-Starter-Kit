@@ -40,7 +40,6 @@
 	<FileRules>
 		<Allow ID="ID_ALLOW_ALL_KMCI" FriendlyName="Allow Kernel Mode components" FileName="*"/>
 		<Allow ID="ID_ALLOW_ALL_UMCI" FriendlyName="Allow User mode components" FileName="*"/>
-		<Deny ID="ID_DENY_PFN_0" FriendlyName="Deny packaged app by Package Family Name (PFN): Microsoft.WindowsTerminal_8wekyb3d8bbwe" PackageFamilyName="Microsoft.WindowsTerminal_8wekyb3d8bbwe" PackageVersion="65535.65535.65535.65535"/>
 		<Deny ID="ID_DENY_D_1" FriendlyName="Deny by Path : System Downloads Folder" FilePath="C:\Users\*\Downloads\*"/>
 	</FileRules>
 	<Signers/>
@@ -56,7 +55,6 @@
 			<ProductSigners>
 				<FileRulesRef>
 					<FileRuleRef RuleID="ID_ALLOW_ALL_UMCI"/>
-					<FileRuleRef RuleID="ID_DENY_PFN_0"/>
 					<FileRuleRef RuleID="ID_DENY_D_1" />
 				</FileRulesRef>
 			</ProductSigners>
@@ -81,4 +79,5 @@
 			</Value>
 		</Setting>
 	</Settings>
+
 </SiPolicy>
