@@ -1,4 +1,4 @@
-<RuleCollection Type="Appx" EnforcementMode="NotConfigured">
+<RuleCollection Type="Appx" EnforcementMode="Enabled">
 	<FilePublisherRule Id="d0c30f1e-3863-4eda-87f3-0310cd0fe685" Name="All signed packaged apps" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
 		<Conditions>
 			<FilePublisherCondition PublisherName="*" ProductName="*" BinaryName="*">
