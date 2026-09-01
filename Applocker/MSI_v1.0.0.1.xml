@@ -1,4 +1,4 @@
-  <RuleCollection Type="Msi" EnforcementMode="NotConfigured">
+  <RuleCollection Type="Msi" EnforcementMode="Enabled">
     <FilePathRule Id="bd441eac-c8c5-4cd3-93c8-ad6f05580973" Name="All Windows Installer files" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
       <Conditions>
         <FilePathCondition Path="*.*" />
