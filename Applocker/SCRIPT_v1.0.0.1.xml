@@ -1,4 +1,4 @@
-  <RuleCollection Type="Script" EnforcementMode="NotConfigured">
+  <RuleCollection Type="Script" EnforcementMode="Enabled">
     <FilePathRule Id="37fcd260-8055-4c44-85f0-22156e5071e2" Name="All scripts" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
       <Conditions>
         <FilePathCondition Path="*" />
